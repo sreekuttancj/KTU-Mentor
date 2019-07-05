@@ -1,1 +1,1 @@
-# KTU-Mentor
+KTU Mentor is an android application designed for KTU (APJ Abdul Kalam Technological University) students,those who needs easy access of KTU study materials such as KTU Syllabus ,KTU Previous year question papers and tools such as Class time table manager,Ktu notifications,KTU CGPA calculator and KTU SGPA calculator.

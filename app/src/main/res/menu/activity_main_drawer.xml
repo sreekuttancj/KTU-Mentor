@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/profile"
+            android:title="Edit Profile" />
+        <item
+            android:id="@+id/important_day"
+            android:icon="@drawable/important_days"
+            android:title="Important Days"/>
+
+        <item
+            android:id="@+id/adblock"
+            android:icon="@drawable/block_ad"
+            android:title="@string/block_add"/>
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/share"
+            android:title="Share this app" />
+        <item
+            android:id="@+id/rate"
+            android:icon="@drawable/rate"
+            android:title="Rate us" />
+
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/about_app"
+            android:title="About Us" />
+    </group>
+
+
+
+</menu>

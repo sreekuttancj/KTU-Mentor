@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:id="@+id/activity_main"
+    android:background="#ffdddddd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/main_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@+id/top_menu_bar"
+                android:background="#ff222222"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip">
+
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:id="@+id/view_top_bar_title_mode"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_gravity="left"
+                        android:id="@+id/button_top_menu_cancel"
+                        android:background="@drawable/selector_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/button_cancel"
+                        android:contentDescription="@string/content_desc" />
+
+                    <TextView
+                        android:textSize="17sp"
+                        android:textColor="#ffffff"
+                        android:gravity="center"
+                        android:id="@+id/top_menu_title"
+                        android:paddingTop="4dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="Add a New Course"
+                        android:singleLine="true"
+                        android:layout_weight="1.0" />
+
+                    <ImageButton
+                        android:id="@+id/button_top_menu_save"
+                        android:background="@drawable/selector_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/button_save"
+                        android:contentDescription="@string/content_desc" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_top_bar_menu_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.DateView
+                        android:id="@+id/date_absenece_view"
+                        android:layout_width="120.0dip"
+                        android:layout_height="match_parent" />
+
+                    <View
+                        android:layout_width="0.0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0" />
+
+
+                    <ImageButton
+                        android:id="@+id/button_add_subject"
+                        android:background="@drawable/selector_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4.0dip"
+                        android:src="@drawable/button_top_menu_add_lesson"
+                        android:contentDescription="@string/content_desc" />
+
+                    <ImageButton
+                        android:id="@+id/button_edit_subject"
+                        android:background="@drawable/selector_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4.0dip"
+                        android:src="@drawable/button_top_menu_edit_lesson"
+                        android:contentDescription="@string/content_desc" />
+
+
+
+                    <ImageButton
+                        android:id="@+id/button_more_menu"
+                        android:background="@drawable/selector_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4.0dip"
+                        android:src="@drawable/button_top_menu_more_menu"
+                        android:contentDescription="@string/content_desc" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/first_timetable"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.TopAxisView
+                    android:id="@+id/top_axis_view_week_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    />
+                <Button
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:id="@+id/button_index_a"
+                    android:background="@drawable/selector_button"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                     />
+
+            </FrameLayout>
+
+
+            <com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.VerticalScrollView
+        android:id="@+id/main_scrollview"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.0">
+
+
+
+                 <com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.ClassMain
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/class_main"
+                android:background="#f4f4f4"
+                android:layout_gravity="top"
+                />
+
+
+            </com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.VerticalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/subject_information_view"
+        android:background="@color/subject_information_background_normal"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageButton
+            android:id="@+id/button_close_subject_information_view"
+            android:background="@drawable/selector_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="4dp"
+            android:src="@drawable/button_close"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:contentDescription="@string/content_desc" />
+
+        <TextView
+            android:textColor="#cccccc"
+            android:gravity="left"
+            android:id="@+id/subject_title"
+            android:layout_width="64dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/subject_title"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:textColor="#cccccc"
+            android:gravity="left"
+            android:id="@+id/professor_title"
+            android:layout_width="64dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="38dp"
+            android:text="@string/professor_title"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:textColor="#ffffff"
+            android:gravity="center_horizontal|left"
+            android:id="@+id/subject_name"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginLeft="72dp"
+            android:text="@string/subject_title"
+            android:singleLine="true"
+            android:layout_alignTop="@id/subject_title"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:textColor="#ffffff"
+            android:gravity="center_horizontal|left"
+            android:id="@+id/professor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginLeft="72dp"
+            android:text="@string/professor_title"
+            android:singleLine="true"
+            android:layout_alignTop="@id/professor_title"
+            android:layout_alignParentLeft="true" />
+
+
+        <EditText
+            android:textSize="14sp"
+            android:gravity="left|center"
+            android:id="@+id/button_subject_name"
+            android:background="@drawable/view_background_white_round_2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginLeft="70dp"
+            android:text=""
+            android:singleLine="true"
+            android:layout_alignTop="@id/subject_title"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/button_color"
+
+            android:inputType="text"
+            android:imeOptions="actionDone" />
+
+        <EditText
+            android:textSize="14sp"
+            android:gravity="left|center"
+            android:id="@+id/button_professor_name"
+            android:background="@drawable/view_background_white_round_2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginLeft="70dp"
+             android:layout_marginRight="10dp"
+            android:text=""
+            android:singleLine="true"
+            android:layout_alignTop="@id/professor_title"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/button_color"
+            android:inputType="text"
+            android:imeOptions="actionDone" />
+
+
+        <com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.color_list.ColorButton
+            android:id="@id/button_color"
+            android:visibility="gone"
+            android:layout_width="48dp"
+            android:layout_height="64dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+
+
+        <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_syllabus"
+        android:layout_alignParentBottom="true">
+
+        </com.google.android.gms.ads.AdView>
+
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/color_button_normal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="13sp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_gravity="top|left"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="@string/color" />
+
+    <TextView
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_gravity="top|left"
+        android:id="@+id/text_view_color"
+        android:background="@drawable/color_button_inside"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:text="A" />
+
+    <Button
+        android:id="@+id/button_change_color"
+        android:background="@drawable/color_button_highlight_selector"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

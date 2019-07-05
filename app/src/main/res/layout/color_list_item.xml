@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/background_view"
+    android:background="@drawable/color_list_item"
+    android:layout_width="44dp"
+    android:layout_height="44dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:layout_gravity="top|left"
+        android:id="@+id/point_view"
+        android:background="@drawable/color_list_item_point"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_margin="14dp" />
+
+    <View
+        android:id="@+id/border_view"
+        android:background="@drawable/color_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@id/button_color"
+        android:background="@drawable/color_button_highlight_selector"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

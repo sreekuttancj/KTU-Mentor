@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="52.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="2.0dip">
+
+        <LinearLayout
+            android:id="@+id/subject_color_view"
+            android:paddingTop="4.0dip"
+            android:paddingBottom="4.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:textSize="17.0sp"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:id="@+id/text_view_subject_name"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26.0dip"
+                    android:text=""
+                    android:singleLine="true" />
+
+                <TextView
+                    android:textSize="12.0sp"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:id="@+id/text_view_professor_name"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16.0dip"
+                    android:text=""
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <Button
+                android:textSize="14.0sp"
+                android:textColor="#ffffffff"
+                android:id="@+id/button_delete_item"
+                android:background="@drawable/lesson_list_item_delete_button_selector"
+                android:paddingLeft="12.0dip"
+                android:paddingRight="12.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginTop="4.0dip"
+                android:layout_marginRight="8.0dip"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="4.0dip"
+                android:text="@string/delete_lesson_button" />
+        </LinearLayout>
+        <View android:id="@+id/highlight_view"
+            android:background="#00000000"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </FrameLayout>
+</merge>

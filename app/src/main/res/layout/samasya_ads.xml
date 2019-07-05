@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView_icon"
+            android:layout_margin="5dp"
+            android:src="@drawable/ads"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_title"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView_icon"
+            android:layout_marginTop="5dp"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:text="Samasya English Malayalam \nDictionary"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/button_install"
+            android:layout_toRightOf="@+id/textView_title"
+            android:layout_alignParentRight="true"
+            android:text="INSTALL"
+            android:layout_margin="5dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_ad"
+            android:textStyle="bold"
+
+            />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

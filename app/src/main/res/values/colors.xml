@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#107896</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#E91E63</color>
+
+    <color name="pressed">#CFD8DC</color>
+    <color name="pressed_button">#90CAF9</color>
+    <color name="pressed_ad">#81C784</color>
+
+    <color name="pressed_cgpa">#FF9800</color>
+    <color name="pressed_clr">#EF5350</color>
+
+
+    <color name="button_background_clear">#00000000</color>
+    <color name="button_background_normal">#00000000</color>
+    <color name="button_background_normal_dark">#ffeeeeee</color>
+    <color name="button_background_pressed">#20ffffff</color>
+    <color name="button_background_pressed_dark">#09000000</color>
+
+    <color name="subject_information_background_normal">#ff101010</color>
+    <color name="subject_information_background_edit_mode">#ff003c66</color>
+    <color name="bar_button_light_gray">#ffd5d5d5</color>
+    <color name="bar_button_dark_gray">#ff444444</color>
+
+    <color name="jan">#BEC3C6</color>
+    <color name="feb">#F44336</color>
+    <color name="mar">#4CAF50</color>
+    <color name="apr">#2196F3</color>
+    <color name="may">#FF0080 </color>
+    <color name="june">#00FFFF	</color>
+    <color name="july">#FF8C69</color>
+    <color name="aug">#FFEB3B</color>
+    <color name="sep">#00BCD4 </color>
+    <color name="oct">#F57F17</color>
+    <color name="nov">#009688</color>
+    <color name="dec">#ffffff</color>
+</resources>

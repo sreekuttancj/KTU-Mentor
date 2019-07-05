@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_weak_day"
+        android:textSize="18sp"
+        android:text="Enable saturday"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/toolbar"/>
+
+    <android.support.v7.widget.SwitchCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch_saturday"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_extend_period"
+        android:textSize="18sp"
+        android:text="Extend Period"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/text_view_weak_day"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_below="@+id/text_view_weak_day"
+        >
+
+     <android.support.v7.widget.AppCompatSpinner
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/spinner_period"
+         >
+
+     </android.support.v7.widget.AppCompatSpinner>
+
+    </RelativeLayout>
+
+</RelativeLayout>

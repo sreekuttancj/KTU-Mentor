@@ -1,0 +1,50 @@
+{
+  "project_info": {
+    "project_number": "112929410746",
+    "firebase_url": "https://ktu-mentor.firebaseio.com",
+    "project_id": "ktu-mentor",
+    "storage_bucket": "ktu-mentor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112929410746:android:874aa068c74b6b8f",
+        "android_client_info": {
+          "package_name": "com.ktu_capsule.ktu.ktucapsule"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112929410746-5avv3l1ful47d7fmhan8miovp1a6pqm6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ktu_capsule.ktu.ktucapsule",
+            "certificate_hash": "B78D0CC780771A4DE3FA64E15C15E76402576C27"
+          }
+        },
+        {
+          "client_id": "112929410746-g4k7dlgmcnlhmshchvct0576vl6qh2tg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCet5RDw0gSzJTYl7E-hCuhb2Egcx5A-kA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

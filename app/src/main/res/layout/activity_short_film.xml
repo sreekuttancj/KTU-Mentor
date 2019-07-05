@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:id="@+id/shadow"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/shadow" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_short_film"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shadow"
+        android:scrollbars="vertical"
+        android:paddingTop="2dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        />
+
+    <ImageButton
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_send_white_24dp"
+        android:id="@+id/imageButton_send"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/transparent"
+        android:layout_marginEnd="10dp"/>
+
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/button_send_info"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:text="Send your Short Films to us"-->
+        <!--android:textColor="@android:color/black"-->
+        <!--android:background="@color/pressed_button"-->
+        <!--android:textAllCaps="false"-->
+
+        <!--/>-->
+
+</RelativeLayout>

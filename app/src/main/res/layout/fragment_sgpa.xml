@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:id="@+id/shadow"
+        android:background="@drawable/shadow" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/shadow"
+        android:layout_marginBottom="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+                android:id="@+id/re_s1_s2"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:visibility="gone"
+        >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/card_view_sub1"
+        android:layout_toLeftOf="@+id/card_view_grade1"
+        android:layout_toStartOf="@+id/card_view_grade1"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        card_view:cardUseCompatPadding="true"
+
+        >
+
+
+        <Spinner
+        android:id="@+id/spinner_subject1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+            />
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/card_view_grade1"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        card_view:cardUseCompatPadding="true"
+        >
+
+
+    <Spinner
+        android:id="@+id/spinner_grade1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="2dp"
+        android:layout_marginEnd="2dp"
+        />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/card_view_sub1"
+        android:id="@+id/card_view_sub2"
+        android:layout_toLeftOf="@+id/card_view_grade1"
+        android:layout_toStartOf="@+id/card_view_grade1"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        card_view:cardUseCompatPadding="true"
+
+        >
+
+        <Spinner
+            android:id="@+id/spinner_subject2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/card_view_grade2"
+        android:layout_below="@+id/card_view_grade1"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        card_view:cardUseCompatPadding="true"
+        >
+
+    <Spinner
+        android:id="@+id/spinner_grade2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="2dp"
+        android:layout_marginEnd="2dp"
+        />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/card_view_sub2"
+        android:id="@+id/card_view_sub3"
+        android:layout_toLeftOf="@+id/card_view_grade3"
+        android:layout_toStartOf="@+id/card_view_grade3"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        card_view:cardUseCompatPadding="true"
+
+        >
+
+    <Spinner
+        android:id="@+id/spinner_subject3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+
+        />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/card_view_grade3"
+        android:layout_below="@+id/card_view_grade2"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        card_view:cardUseCompatPadding="true"
+        >
+
+
+    <Spinner
+        android:id="@+id/spinner_grade3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="2dp"
+        android:layout_marginEnd="2dp"
+        />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/card_view_sub3"
+        android:id="@+id/card_view_sub4"
+        android:layout_toLeftOf="@+id/card_view_grade4"
+        android:layout_toStartOf="@+id/card_view_grade4"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        card_view:cardUseCompatPadding="true"
+
+        >
+    <Spinner
+        android:id="@+id/spinner_subject4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/card_view_grade4"
+        android:layout_below="@+id/card_view_grade3"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        card_view:cardUseCompatPadding="true"
+        >
+
+    <Spinner
+        android:id="@+id/spinner_grade4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="2dp"
+        android:layout_marginEnd="2dp"
+
+        />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/card_view_sub4"
+        android:id="@+id/card_view_sub5"
+        android:layout_toLeftOf="@+id/card_view_grade5"
+        android:layout_toStartOf="@+id/card_view_grade5"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        card_view:cardUseCompatPadding="true"
+
+        >
+
+    <Spinner
+        android:id="@+id/spinner_subject5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        />
+</android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/card_view_grade5"
+        android:layout_below="@+id/card_view_grade4"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        card_view:cardUseCompatPadding="true"
+        >
+
+
+    <Spinner
+        android:id="@+id/spinner_grade5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="2dp"
+        android:layout_marginEnd="2dp"
+         />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/card_view_sub5"
+        android:id="@+id/card_view_sub6"
+        android:layout_toLeftOf="@+id/card_view_grade6"
+        android:layout_toStartOf="@+id/card_view_grade6"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        card_view:cardUseCompatPadding="true"
+
+        >
+    <Spinner
+        android:id="@+id/spinner_subject6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+          />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/card_view_grade6"
+        android:layout_below="@+id/card_view_grade5"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        card_view:cardUseCompatPadding="true"
+        >
+
+    <Spinner
+        android:id="@+id/spinner_grade6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="2dp"
+        android:layout_marginEnd="2dp"
+        />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/card_view_sub6"
+        android:id="@+id/card_view_sub7"
+        android:layout_toLeftOf="@+id/card_view_grade7"
+        android:layout_toStartOf="@+id/card_view_grade7"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        card_view:cardUseCompatPadding="true"
+
+        >
+
+    <Spinner
+        android:id="@+id/spinner_subject7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/card_view_grade7"
+        android:layout_below="@+id/card_view_grade6"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        card_view:cardUseCompatPadding="true"
+        >
+
+
+    <Spinner
+        android:id="@+id/spinner_grade7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="2dp"
+        android:layout_marginEnd="2dp"
+        />
+</android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/card_view_sub7"
+        android:id="@+id/card_view_sub8"
+        android:layout_toLeftOf="@+id/card_view_grade8"
+        android:layout_toStartOf="@+id/card_view_grade8"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        card_view:cardUseCompatPadding="true"
+
+        >
+    <Spinner
+        android:id="@+id/spinner_subject8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        />
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/card_view_grade8"
+        android:layout_below="@+id/card_view_grade7"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        card_view:cardUseCompatPadding="true"
+        >
+
+    <Spinner
+        android:id="@+id/spinner_grade8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="2dp"
+        android:layout_marginEnd="2dp"
+
+        />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/card_view_sub8"
+        android:id="@+id/card_view_sub9"
+        android:layout_toLeftOf="@+id/card_view_grade9"
+        android:layout_toStartOf="@+id/card_view_grade9"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        card_view:cardUseCompatPadding="true"
+
+        >
+    <Spinner
+        android:id="@+id/spinner_subject9"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+          />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:id="@+id/card_view_grade9"
+        android:layout_below="@+id/card_view_grade8"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        card_view:cardUseCompatPadding="true"
+        >
+
+
+
+    <Spinner
+        android:id="@+id/spinner_grade9"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="2dp"
+        android:layout_marginEnd="2dp"
+        />
+
+    </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_view_sub9"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+
+            >
+
+        <android.support.v7.widget.CardView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:id="@+id/card_view_button_clr"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardBackgroundColor="#EF5350"
+            android:layout_weight="1"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+            >
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/buttonClear"
+                android:background="@drawable/button_press_clr"
+                android:text="@string/clear"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                />
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardBackgroundColor="#FF9900"
+            android:layout_weight="1"
+
+            >
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/buttonSgpa"
+                android:background="@drawable/button_press_gpa"
+                android:text="@string/sgpa"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center"/>
+
+
+        </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/re_other"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/card_view_s_sub1"
+                android:layout_toLeftOf="@+id/card_view_s_grade1"
+                android:layout_toStartOf="@+id/card_view_s_grade1"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                card_view:cardUseCompatPadding="true"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/textView_s_subject1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:singleLine="true"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:id="@+id/card_view_s_grade1"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                card_view:cardUseCompatPadding="true"
+                >
+
+
+                <Spinner
+                    android:id="@+id/spinner_s_grade1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginEnd="2dp"
+                    />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/card_view_s_sub2"
+                android:layout_toLeftOf="@+id/card_view_s_grade1"
+                android:layout_toStartOf="@+id/card_view_s_grade1"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/card_view_s_sub1"
+                card_view:cardUseCompatPadding="true"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/textView_s_subject2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:singleLine="true"
+
+                    />
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:id="@+id/card_view_s_grade2"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                card_view:cardUseCompatPadding="true"
+                android:layout_below="@+id/card_view_s_sub1"
+
+                >
+
+
+                <Spinner
+                    android:id="@+id/spinner_s_grade2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginEnd="2dp"
+                    />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/card_view_s_sub3"
+                android:layout_toLeftOf="@+id/card_view_s_grade1"
+                android:layout_toStartOf="@+id/card_view_s_grade1"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/card_view_s_sub2"
+                card_view:cardUseCompatPadding="true"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/textView_s_subject3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:singleLine="true"
+
+                    />
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:id="@+id/card_view_s_grade3"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                card_view:cardUseCompatPadding="true"
+                android:layout_below="@+id/card_view_s_sub2"
+
+                >
+
+
+                <Spinner
+                    android:id="@+id/spinner_s_grade3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginEnd="2dp"
+                    />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/card_view_s_sub4"
+                android:layout_toLeftOf="@+id/card_view_s_grade1"
+                android:layout_toStartOf="@+id/card_view_s_grade1"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/card_view_s_sub3"
+                card_view:cardUseCompatPadding="true"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/textView_s_subject4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:singleLine="true"
+
+                    />
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:id="@+id/card_view_s_grade4"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                card_view:cardUseCompatPadding="true"
+                android:layout_below="@+id/card_view_s_sub3"
+
+                >
+
+
+                <Spinner
+                    android:id="@+id/spinner_s_grade4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginEnd="2dp"
+                    />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/card_view_s_sub5"
+                android:layout_toLeftOf="@+id/card_view_s_grade1"
+                android:layout_toStartOf="@+id/card_view_s_grade1"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/card_view_s_sub4"
+                card_view:cardUseCompatPadding="true"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/textView_s_subject5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:singleLine="true"
+
+                    />
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:id="@+id/card_view_s_grade5"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                card_view:cardUseCompatPadding="true"
+                android:layout_below="@+id/card_view_s_sub4"
+
+                >
+
+
+                <Spinner
+                    android:id="@+id/spinner_s_grade5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginEnd="2dp"
+                    />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/card_view_s_sub6"
+                android:layout_toLeftOf="@+id/card_view_s_grade1"
+                android:layout_toStartOf="@+id/card_view_s_grade1"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/card_view_s_sub5"
+                card_view:cardUseCompatPadding="true"
+
+                >
+
+
+                <Spinner
+                    android:id="@+id/spinner_s_subject6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:id="@+id/card_view_s_grade6"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                card_view:cardUseCompatPadding="true"
+                android:layout_below="@+id/card_view_s_sub5"
+
+                >
+
+
+                <Spinner
+                    android:id="@+id/spinner_s_grade6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginEnd="2dp"
+                    />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/card_view_s_lab1"
+                android:layout_toLeftOf="@+id/card_view_s_grade1"
+                android:layout_toStartOf="@+id/card_view_s_grade1"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/card_view_s_sub6"
+                card_view:cardUseCompatPadding="true"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/textView_s_lab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:singleLine="true"
+
+                    />
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:id="@+id/card_view_s_lab_grade1"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                card_view:cardUseCompatPadding="true"
+                android:layout_below="@+id/card_view_s_sub6"
+
+                >
+
+
+                <Spinner
+                    android:id="@+id/spinner_s_lab_grade1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginEnd="2dp"
+                    />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/card_view_s_lab2"
+                android:layout_toLeftOf="@+id/card_view_s_grade1"
+                android:layout_toStartOf="@+id/card_view_s_grade1"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/card_view_s_lab1"
+                card_view:cardUseCompatPadding="true"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/textView_s_lab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:singleLine="true"
+
+                    />
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:id="@+id/card_view_s_lab_grade2"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                card_view:cardUseCompatPadding="true"
+                android:layout_below="@+id/card_view_s_lab1"
+
+                >
+
+
+                <Spinner
+                    android:id="@+id/spinner_s_lab_grade2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginEnd="2dp"
+                    />
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_view_s_lab2"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+
+                >
+
+                <android.support.v7.widget.CardView
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:id="@+id/card_view_s_button_clr"
+                    card_view:cardUseCompatPadding="true"
+                    card_view:cardBackgroundColor="#EF5350"
+                    android:layout_weight="1"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+                    >
+
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/buttonClear_s"
+                        android:background="@drawable/button_press_clr"
+                        android:text="@string/clear"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"
+                        />
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    card_view:cardUseCompatPadding="true"
+                    card_view:cardBackgroundColor="#FF9900"
+                    android:layout_weight="1"
+
+                    >
+
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/buttonSgpa_s"
+                        android:background="@drawable/button_press_gpa"
+                        android:text="@string/sgpa"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"/>
+
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

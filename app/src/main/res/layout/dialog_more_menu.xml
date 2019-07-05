@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/more_menu_dialog_background"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+     >
+
+<LinearLayout
+android:orientation="horizontal"
+android:paddingLeft="8dp"
+android:paddingTop="2dp"
+android:paddingRight="8dp"
+android:paddingBottom="8dp"
+android:layout_width="248dp"
+android:layout_height="wrap_content">
+
+
+
+    <Button
+        android:textSize="12sp"
+        android:textColor="#dddddd"
+        android:id="@+id/button_settings"
+        android:background="@drawable/selector_button"
+        android:layout_width="72dp"
+        android:layout_height="64dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/settings_title"
+        android:drawableTop="@drawable/more_menu_settings" />
+
+<Button
+    android:textSize="12sp"
+    android:textColor="#dddddd"
+    android:id="@+id/button_share"
+    android:background="@drawable/selector_button"
+    android:layout_width="72dp"
+    android:layout_height="64dp"
+    android:text="@string/share"
+    android:drawableTop="@drawable/more_menu_share" />
+
+</LinearLayout>
+
+
+<ImageButton
+    android:id="@+id/button_close"
+    android:background="@drawable/selector_button"
+    android:layout_width="44dp"
+    android:layout_height="44dp"
+    android:layout_marginTop="24dp"
+    android:src="@drawable/button_close"
+    android:contentDescription="@string/content_desc" />
+
+</LinearLayout>

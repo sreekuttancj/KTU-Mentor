@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:id="@+id/shadow"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/shadow" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shadow">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_intro"
+        android:textSize="15sp"
+        android:layout_margin="16dp"
+        android:text="@string/samasya_intro"
+        android:textColor="#616161"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_features"
+        android:text="Features:"
+        android:layout_below="@+id/textView_intro"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/colorAccent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_features1"
+        android:text="@string/samasya_features"
+        android:layout_below="@+id/textView_features"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark"/>
+    </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_install"
+        android:layout_alignParentBottom="true"
+        android:text="INSTALL"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:background="@drawable/samasya_install"/>
+
+
+
+</RelativeLayout>

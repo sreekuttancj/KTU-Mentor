@@ -1,0 +1,900 @@
+<resources>
+    <string name="app_name">KTU Mentor</string>
+    <string name="app_caption">Trust Me I will guide you</string>
+
+    //Admod Id
+
+    <!--<string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>-->
+
+
+    <string name="banner_ad_home">ca-app-pub-9331579017320394/2209577062</string>
+    <string name="banner_ad_syllabus">ca-app-pub-9331579017320394/6639776661</string>
+    <string name="banner_ad_question_bank">ca-app-pub-9331579017320394/8116509860</string>
+    <string name="banner_ad_about_us">ca-app-pub-9331579017320394/2069976267</string>
+    <string name="industritial_short_film">ca-app-pub-9331579017320394/4490628265</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+    <string name="samasya_intro"><b>Samasya</b> is the one of the simplest , user friendly and offline  malayalam dictionary app available on play store. It contains more than 2,00,000 words that covers most of the words with <b>OXFORD dictionary</b>.</string>
+    <string name="samasya_features">\u2022 English to Malayalam Dictionary\n\n\u2022 Malayalam to English Dictionary\n\n\u2022 Built In Google Translate\n\n\u2022 Maintain Search history\n\n\u2022 Save Favourite words\n\n\u2022 Long press to copy any word\n\n\u2022 English Pronunciation\n\n\u2022 No internet connection required\n\n<b>All features in a single application</b></string>
+    //Text view / EditText
+
+    <string name="calculator">GPA Calculator</string>
+    <string name="syllabus">Syllabus</string>
+    <string name="question_papers">Question Bank</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="dictionary">Dictionary</string>
+    <string name="about_us">About Us</string>
+    <string name="timetable">Class Timetable</string>
+    <string name="announcements">Announcements</string>
+    <string name="academic_calendar">Academic Calendar</string>
+    <string name="app_version">KTU Mentor 2.8</string>
+
+    <string name="name">Name</string>
+    <string name="email_id">Email_id</string>
+    <string name="password">Password</string>
+
+    //Button
+
+    <string name="btn_rate_us">Rate This App</string>
+    <string name="btn_share_app">Share This App</string>
+    <string name="btn_like_us">Like us on Facebook</string>
+    <string name="btn_like_us_plus">Follow us on Google+</string>
+    <string name="btn_done">Save</string>
+    <string name="btn_whats_app">+91 8943616564</string>
+    <string name="btn_email">ktumentor@gmail.com</string>
+    //Menu
+
+    <string name="menu_rate_us">Rate This App</string>
+    <string name="menu_share">Share This App</string>
+    <string name="menu_short_fiml">Send Your Short Film</string>
+    <string name="notification">Notification</string>
+    <string name="content_desc" />
+
+    <string name="subject_title">Subject</string>
+    <string name="professor_title">Prof.</string>
+    <string name="subject_name_empty_message">Type in subject name</string>
+    <string name="select_lesson_title">Select a Course for Editing</string>
+    <string name="edit_course">Edit a Course</string>
+    <string name="delete_lesson_button">Delete</string>
+    <string name="delete_all_button">Delete All</string>
+    <string name="message_delete_item_1">Deleting \"</string>
+    <string name="message_delete_item_2">\" will also delete all of its data.</string>
+    <string name="message_delete_all_lessons">All courses and their data to be deleted.</string>
+    <string name="button_delete_this_lesson">Delete This Course</string>
+    <string name="button_delete_all_lessons">Delete All Courses</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="assign_view_details">Details</string>
+    <string name="assign_view_complete">Done</string>
+    <string name="color">Color</string>
+    <string name="settings_title">Settings</string>
+    <string name="ok_button">OK</string>
+    <string name="close_button">Close</string>
+    <string name="share">Share</string>
+    <string name="assign_view_title">Assignments</string>
+    <string name="share_content">Share Now On Whatsapp to 5 Different Groups/Friends for Block Ads</string>
+    <string name="block_add">Block Ads</string>
+    <string name="share_whatsapp">Share On Whatsapp</string>
+    <string name="share_save_image">Save Image To Gallery</string>
+    <string name="share_to">Share toâ€¦</string>
+
+    <string name="hint_name">Short Film Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_mob">Mobile No</string>
+    <string name="hint_duration">Duration</string>
+    <string name="hint_youtube_link">Youtube Link</string>
+    <string name="hint_college">College Name</string>
+    <string name="btn_send">Submit</string>
+    <string name="shortfilm_description">We are happy to show B.Tech students Short Films in KTU Mentor.Please send your/friends short film information to us.</string>
+    <string name="err_msg_name">Enter your Short Film name</string>
+    <string name="err_msg_email">Enter valid email address</string>
+    <string name="err_msg_mobile">Enter valid mobile number</string>
+    <string name="err_msg_duration">Enter Short Film Duration</string>
+    <string name="err_msg_youtube">Enter valid Youtube link</string>
+
+
+    <string name="sgpa_s1">SGPA of S1</string>
+    <string name="sgpa_s2">SGPA of S2</string>
+    <string name="sgpa_s3">SGPA of S3</string>
+    <string name="sgpa_s4">SGPA of S4</string>
+    <string name="sgpa_s5">SGPA of S5</string>
+    <string name="sgpa_s6">SGPA of S6</string>
+    <string name="sgpa_s7">SGPA of S7</string>
+    <string name="sgpa_s8">SGPA of S8</string>
+
+    <string name="m1">Module 1</string>
+    <string name="m2">Module 2</string>
+    <string name="m3">Module 3</string>
+    <string name="m4">Module 4</string>
+    <string name="m5">Module 5</string>
+    <string name="m6">Module 6</string>
+    <string name="textbook">Textbook &amp; Reference </string>
+    <string name="clear">C</string>
+    <string name="cgpa">CGPA</string>
+    <string name="sgpa">SGPA</string>
+
+    //Semester array
+
+    <string-array name="semester">
+        <item>S1&amp;S2</item>
+        <item>S3</item>
+        <item>S4</item>
+        <item>S5</item>
+        <item>S6</item>
+        <item>S7</item>
+        <item>S8</item>
+
+    </string-array>
+
+
+    //Course No
+
+    <string-array name="s1_s2_course_no">
+        <item>MA 101</item>
+        <item>PH 100</item>
+        <item>CY 100</item>
+        <item>BE 100</item>
+        <item>BE 110</item>
+        <item>BE 101-01</item>
+        <item>BE 101-02</item>
+        <item>BE 101-03</item>
+        <item>BE 101-04</item>
+        <item>BE 101-05</item>
+        <item>BE 101-06</item>
+        <item>BE 103</item>
+        <item>CE 100</item>
+        <item>ME 100</item>
+        <item>EE 100</item>
+        <item>EC 100</item>
+        <item>MA102</item>
+        <item>BE102</item>
+    </string-array>
+
+    //Credit
+
+    <string-array name="s1_s2_credit">
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>4</item>
+        <item>3</item>
+    </string-array>
+
+    //Course
+
+    <string-array name="s1_s2_subjects">
+        <item>Calculus</item>
+        <item>Engineering Physics</item>
+        <item>Engineering Chemistry</item>
+        <item>Engineering Mechanics</item>
+        <item>Engineering Graphics</item>
+        <item>Introduction to Civil Engineering</item>
+        <item>Introduction to Mechanical Engineering Sciences</item>
+        <item>Introduction to Electrical Engineering</item>
+        <item>Introduction to Electronics Engineering</item>
+        <item>Introduction to Computing and Problem Solving</item>
+        <item>Introduction to Chemical Engineering</item>
+        <item>Introduction to Sustainable Engineering</item>
+        <item>Basics of Civil Engineering</item>
+        <item>Basics of Mechanical Engineering</item>
+        <item>Basics of Electrical Engineering</item>
+        <item>Basics of Electronics Engineering</item>
+        <item>Differential Equations</item>
+        <item>Design and Engineering</item>
+    </string-array>
+
+
+    <string-array name="cs_s3_subject">
+        <item>Linear Algebra &amp; ComplexAnalysis</item>
+        <item>Discrete Computational Structures</item>
+        <item>Switching Theory and Logic Design</item>
+        <item>Data Structures</item>
+        <item>Electronics Devices &amp; Circuits</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Data Structures Lab</item>
+        <item>Electronics Circuits Lab</item>
+
+    </string-array>
+
+    <string-array name="cs_s4_subject">
+        <item>Probability Distributions,Transforms and Numerical Methods</item>
+        <item>Computer Organization and Architecture</item>
+        <item>Operating Systems</item>
+        <item>Object Oriented Design and Programming</item>
+        <item>Principles of Database Design</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Free and Open Source Software Lab</item>
+        <item>Digital Systems Lab</item>
+    </string-array>
+
+    <string-array name="cs_s3_course_no">
+        <item>MA201</item>
+        <item>CS201</item>
+        <item>CS203</item>
+        <item>CS205</item>
+        <item>CS207</item>
+        <item>HS210</item>
+        <item>HS200</item>
+
+    </string-array>
+
+    <string-array name="cs_s4_course_no">
+        <item>MA202</item>
+        <item>CS202</item>
+        <item>CS204</item>
+        <item>CS206</item>
+        <item>CS208</item>
+        <item>HS210</item>
+        <item>HS200</item>
+
+</string-array>
+
+    <string-array name="ce_s3_subject">
+        <item>Linear Algebra &amp; ComplexAnalysis</item>
+        <item>Mechanics of Solids</item>
+        <item>Fluid Mechanics I</item>
+        <item>Engineering Geology</item>
+        <item>Surveying</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Civil Engineering Drafting Lab</item>
+        <item>Surveying Lab</item>
+
+    </string-array>
+
+    <string-array name="ce_s4_subject">
+        <item>Probability Distributions,Transforms and Numerical Methods</item>
+        <item>Structural Analysis- I</item>
+        <item>Construction Technology</item>
+        <item>Fluid Mechanics- II</item>
+        <item>Geotechnical Engineering- I</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Materials Testing Lab I</item>
+        <item>Fluid Mechanics Lab</item>
+    </string-array>
+
+    <string-array name="ce_s3_course_no">
+        <item>MA201</item>
+        <item>CE201</item>
+        <item>CE203</item>
+        <item>CE205</item>
+        <item>CE207</item>
+        <item>HS210</item>
+        <item>HS200</item>
+
+    </string-array>
+
+    <string-array name="ce_s4_course_no">
+        <item>MA202</item>
+        <item>CE202</item>
+        <item>CE204</item>
+        <item>CE206</item>
+        <item>CE208</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+
+    <string-array name="ch_s3_subject">
+        <item>Linear Algebra &amp; Complex Analysis</item>
+        <item>Chemical Process Calculations</item>
+        <item>Particle Technology</item>
+        <item>Fluid and Particle Mechanics I</item>
+        <item>Chemistry for Process Engineering I</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Chemistry Lab for Process Engineering</item>
+        <item>Chemistry Technology and Environmental Lab</item>
+
+    </string-array>
+
+    <string-array name="ch_s4_subject">
+        <item>Probability Distributions,Transforms and Numerical Methods</item>
+        <item>Process Heat Transfer</item>
+        <item>Chemical Engineering Thermodynamics</item>
+        <item>Fluid and Particle Mechanics- II</item>
+        <item>Chemistry for Process Engineering- II</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Fluid and Particle Mechanics Lab</item>
+        <item>Particle Technology Lab</item>
+
+    </string-array>
+
+    <string-array name="ch_s3_course_no">
+        <item>MA201</item>
+        <item>CH201</item>
+        <item>CH203</item>
+        <item>CH205</item>
+        <item>CH207</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+
+    <string-array name="ch_s4_course_no">
+        <item>MA202</item>
+        <item>CH202</item>
+        <item>CH204</item>
+        <item>CH206</item>
+        <item>CH208</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+
+    <string-array name="ec_s3_subject">
+        <item>Linear Algebra &amp; ComplexAnalysis</item>
+        <item>Network Theory</item>
+        <item>Solid State Devices</item>
+        <item>Electronic Circuits</item>
+        <item>Logic Circuit Design</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Electronic Devices &amp; Circuits Lab</item>
+        <item>Electronic Design Automation Lab</item>
+    </string-array>
+
+    <string-array name="ec_s4_subject">
+        <item>Probability distributions, Random Processes and Numerical Methods</item>
+        <item>Signals &amp; Systems</item>
+        <item>Analog Integrated Circuits</item>
+        <item>Computer Organization</item>
+        <item>Analogue Communication Engineering</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Analogue Integrated Circuits Lab</item>
+        <item>Logic Circuit Design Lab</item>
+    </string-array>
+
+
+    <string-array name="ec_s3_course_no">
+        <item>MA201</item>
+        <item>EC201</item>
+        <item>EC203</item>
+        <item>EC205</item>
+        <item>EC207</item>
+        <item>HS210</item>
+        <item>HS200</item>
+
+    </string-array>
+
+    <string-array name="ec_s4_course_no">
+        <item>MA204</item>
+        <item>EC202</item>
+        <item>EC204</item>
+        <item>EC206</item>
+        <item>EC208</item>
+        <item>HS210</item>
+        <item>HS200</item>
+
+    </string-array>
+    <string-array name="ee_s3_subject">
+        <item>Linear Algebra &amp; ComplexAnalysis</item>
+        <item>Circuits and Networks</item>
+        <item>Analog Electronic Circuits</item>
+        <item>DC Machines and Transformers</item>
+        <item>Computer Programming</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Electronic Circuits Lab</item>
+        <item>Programming Lab</item>
+    </string-array>
+
+    <string-array name="ee_s4_subject">
+        <item>Probability Distributions,Transforms and Numerical Methods</item>
+        <item>Synchronous and Induction Machines</item>
+        <item>Digital Electronics and Logic Design</item>
+        <item>Material Science</item>
+        <item>Measurements and Instrumentation</item>
+        <item>Life Skills</item>
+        <item>Electronic Circuits Lab</item>
+        <item>Electrical Machines Lab I</item>
+        <item>Circuits and Measurements Lab</item>
+
+    </string-array>
+    <string-array name="ee_s3_course_no">
+        <item>MA201</item>
+        <item>EE201</item>
+        <item>EE203</item>
+        <item>EE205</item>
+        <item>EE207</item>
+        <item>HS210</item>
+        <item>HS200</item>
+
+    </string-array>
+    <string-array name="ee_s4_course_no">
+        <item>MA202</item>
+        <item>EE202</item>
+        <item>EE204</item>
+        <item>EE206</item>
+        <item>EE208</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+    <string-array name="ic_s3_subject">
+        <item>Linear Algebra &amp; ComplexAnalysis</item>
+        <item>Basic Instrumentation Engineering and Transducers</item>
+        <item>Electrical and Electronics Measurements</item>
+        <item>Design of Electronic Circuits</item>
+        <item>Design of Logic Circuits</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Electronic Devices &amp; Circuits Lab</item>
+        <item>Logic Circuits Lab</item>
+    </string-array>
+
+    <string-array name="ic_s4_subject">
+        <item>Probability Distributions,Transforms and Numerical Methods</item>
+        <item>Linear Systems and Networks</item>
+        <item>Integrated Circuits and Systems</item>
+        <item>Microcontrollers</item>
+        <item>Mechanical Instrumentation</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Analog Circuits Lab</item>
+        <item>Electrical And Electronics Measurements Lab</item>
+    </string-array>
+    <string-array name="ic_s3_course_no">
+        <item>MA201</item>
+        <item>IC201</item>
+        <item>IC203</item>
+        <item>BM207</item>
+        <item>IC207</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+    <string-array name="ic_s4_course_no">
+        <item>MA202</item>
+        <item>IC202</item>
+        <item>BM204</item>
+        <item>IC206</item>
+        <item>IC208</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+
+    <string-array name="ie_s3_subject">
+        <item>Linear Algebra &amp; ComplexAnalysis</item>
+        <item>Thermal Engineering I</item>
+        <item>Fluid Mechanics &amp; Machinery</item>
+        <item>Mechanical Properties of Structural Materials</item>
+        <item>Theory of Machines</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Fluid Mechanics &amp; Machines Lab</item>
+        <item>Machine Dynamics and Material Testing Lab</item>
+    </string-array>
+
+    <string-array name="ie_s4_subject">
+        <item>Introduction to Stochastic Models</item>
+        <item>Elements of Machine Design</item>
+        <item>Thermal Engineering –II</item>
+        <item>Object Oriented Programming &amp; Numerical Methods</item>
+        <item>Manufacturing Technology</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Thermal Engineering Lab</item>
+        <item>Object Oriented Programming Lab</item>
+    </string-array>
+    <string-array name="ie_s3_course_no">
+        <item>MA201</item>
+        <item>ME207</item>
+        <item>ME200</item>
+        <item>ME209</item>
+        <item>ME213</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+    <string-array name="ie_s4_course_no">
+        <item>MA208</item>
+        <item>ME218</item>
+        <item>ME222</item>
+        <item>IE202</item>
+        <item>ME220</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+
+    <string-array name="it_s3_subject">
+        <item>Linear Algebra &amp; Complex Analysis</item>
+        <item>Discrete Computational Structures</item>
+        <item>Digital System Design</item>
+        <item>Data Structures</item>
+        <item>Data Communication</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Data Structures Lab</item>
+        <item>Digital Circuits Lab</item>
+    </string-array>
+    <string-array name="it_s4_subject">
+        <item>Probability Distributions,Transforms and Numerical Methods</item>
+        <item>Computer Organization and Architecture</item>
+        <item>Algorithm Analysis &amp; Design</item>
+        <item>Object Oriented Techniques</item>
+        <item>Principles of Data Base Design</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Object Oriented Programming Lab</item>
+        <item>Algorithm Design Lab</item>
+    </string-array>
+
+    <string-array name="it_s3_course_no">
+        <item>MA201</item>
+        <item>CS201</item>
+        <item>IT201</item>
+        <item>CS205</item>
+        <item>IT203</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+
+    <string-array name="it_s4_course_no">
+        <item>MA202</item>
+        <item>CS202</item>
+        <item>IT202</item>
+        <item>IT204</item>
+        <item>CS208</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+
+    <string-array name="me_s3_subject">
+        <item>Linear Algebra &amp; ComplexAnalysis</item>
+        <item>Mechanics of Solids</item>
+        <item>Mechanics of Fluids</item>
+        <item>Thermodynamics</item>
+        <item>Metallurgy and Materials Engineering</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Computer Aided Machine Drawing Lab</item>
+        <item>Material Testing Lab</item>
+    </string-array>
+    <string-array name="me_s4_subject">
+        <item>Probability Distributions,Transforms and Numerical Methods</item>
+        <item>Advanced Mechanics of Solids</item>
+        <item>Thermal Engineering</item>
+        <item>Fluid Machinery</item>
+        <item>Manufacturing Technology</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Thermal Engineering Lab</item>
+        <item>Fluid Mechanics &amp; Machines Lab</item>
+</string-array>
+    <string-array name="me_s3_course_no">
+        <item>MA201</item>
+        <item>ME201</item>
+        <item>ME203</item>
+        <item>ME205</item>
+        <item>ME207</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+    <string-array name="me_s4_course_no">
+        <item>MA202</item>
+        <item>ME202</item>
+        <item>ME204</item>
+        <item>ME206</item>
+        <item>ME220</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+
+    <string-array name="bm_s3_subject">
+        <item>Linear Algebra &amp; ComplexAnalysis</item>
+        <item>Basic Medical Sciences for Engineers</item>
+        <item>Network Analysis</item>
+        <item>Design of Electronic Circuits</item>
+        <item>Design of Logic Circuits</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Electronic Devices &amp; Circuits Lab</item>
+        <item>Logic Circuits Lab</item>
+    </string-array>
+    <string-array name="bm_s4_subject">
+        <item>Probability Distribution, Transforms and Numerical Methods</item>
+        <item>Biophysics</item>
+        <item>Integrated Circuits &amp; Systems</item>
+        <item>Microcontrollers</item>
+        <item>Fundamentals of Computer Programming</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Analog Circuits Lab</item>
+        <item>Computer Programming Lab</item>
+    </string-array>
+    <string-array name="bm_s3_course_no">
+        <item>MA201</item>
+        <item>BM201</item>
+        <item>BM203</item>
+        <item>BM207</item>
+        <item>IC207</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+    <string-array name="bm_s4_course_no">
+        <item>MA202</item>
+        <item>BM202</item>
+        <item>BM204</item>
+        <item>C206</item>
+        <item>BM206</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+
+    <string-array name="au_s3_subject">
+        <item>Linear Algebra &amp; ComplexAnalysis</item>
+        <item>Mechanics of Solids</item>
+        <item>S I Engines &amp; Combustion</item>
+        <item>Fluid Mechanics &amp; Machinery</item>
+        <item>Auto Chassis</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Fluid Mechanics &amp; Machines Lab</item>
+        <item>Material Testing Lab</item>
+    </string-array>
+    <string-array name="au_s4_subject">
+        <item>Probability Distributions,Transforms and Numerical methods</item>
+        <item>Advanced Thermodynamics</item>
+        <item>C I Engines &amp; Combustion</item>
+        <item>Auto Transmission</item>
+        <item>Computer Programming</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Computer Programming Lab</item>
+        <item>Vehicle Systems Lab</item>
+</string-array>
+    <string-array name="au_s3_course_no">
+        <item>MA201</item>
+        <item>ME201</item>
+        <item>AU201</item>
+        <item>ME200</item>
+        <item>AU203</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+    <string-array name="au_s4_course_no">
+        <item>MA202</item>
+        <item>AU202</item>
+        <item>AU204</item>
+        <item>AU206</item>
+        <item>AU208</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+
+    <string-array name="mr_s3_subject">
+        <item>Linear Algebra &amp; ComplexAnalysis</item>
+        <item>C Programming</item>
+        <item>Electrical Technology</item>
+        <item>Analog Electronics</item>
+        <item>Science of Measurements</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Electrical Technology Lab</item>
+        <item>Analog Electronics Lab</item>
+    </string-array>
+    <string-array name="mr_s4_subject">
+        <item>Probability Distribution, Transforms and Numerical Methods</item>
+        <item>Linear Integrated Circuits and Digital Electronics</item>
+        <item>Fluid Mechanics &amp; Machinery</item>
+        <item>Sensors and Actuators</item>
+        <item>Metallurgy and Materials Engineering</item>
+        <item>Business Economics</item>
+        <item>Life Skills</item>
+        <item>Linear Integrated Circuits and Digital Electronics Lab</item>
+        <item>Fluid Mechanics and Machinery Lab</item>
+    </string-array>
+    <string-array name="mr_s3_course_no">
+        <item>MA201</item>
+        <item>MR201</item>
+        <item>EE218</item>
+        <item>EC216</item>
+        <item>MR205</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+    <string-array name="mr_s4_course_no">
+        <item>MA202</item>
+        <item>EC212</item>
+        <item>ME200</item>
+        <item>MR202</item>
+        <item>ME210</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+
+    <string-array name="ao_s3_subject">
+        <item>Linear Algebra &amp; ComplexAnalysis</item>
+        <item>Mechanics of Solids And Mechanics of Machines</item>
+        <item>Fluid Mechanics &amp; Machinery</item>
+        <item>Thermodynamics</item>
+        <item>Aircraft Basics and Controls</item>
+        <item>Business Economics/Life Skills</item>
+        <item>Life Skills</item>
+        <item>Fluid Mechanics &amp; Machines Lab</item>
+        <item>Material Testing Lab</item>
+    </string-array>
+    <string-array name="ao_s4_subject">
+        <item>Probability Distributions,Transforms and Numerical methods</item>
+        <item>Aerodynamics-I</item>
+        <item>Aircraft Structures-I</item>
+        <item>Propulsion-I</item>
+        <item>Aircraft Materials and Processes</item>
+        <item>Business Economics/Life Skills</item>
+        <item>Life Skills</item>
+        <item>Aerodynamics and Flight Mechanics Lab</item>
+        <item>CAD Lab</item>
+</string-array>
+    <string-array name="ao_s3_course_no">
+        <item>MA201</item>
+        <item>ME211</item>
+        <item>ME200</item>
+        <item>ME205</item>
+        <item>AO201</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+    <string-array name="ao_s4_course_no">
+        <item>MA202</item>
+        <item>AO202</item>
+        <item>AO204</item>
+        <item>AO206</item>
+        <item>AO208</item>
+        <item>HS210</item>
+        <item>HS200</item>
+    </string-array>
+
+    <string-array name="ae_s4_subject">
+        <item>Probability distributions, Random Processes and Numerical Methods</item>
+        <item>Computer Programming</item>
+        <item>Analog Integrated Circuits</item>
+        <item>Sensors and Transducers</item>
+        <item>Electrical Engineering</item>
+        <item>Business Economics/Life Skills</item>
+        <item>Life Skills</item>
+        <item>Analog Integrated Circuits Lab</item>
+        <item>Transducers and Instrumentation Lab</item>
+</string-array>
+    <string-array name="ae_s4_course_no">
+        <item>MA204</item>
+        <item>AE202</item>
+        <item>EC204</item>
+        <item>AE204</item>
+        <item>EE216</item>
+        <item>HS210</item>
+        <item>HS200</item>
+</string-array>
+
+    <string-array name="ae_s3_lab">
+        <item>Electronic Devices &amp; Circuits Lab</item>
+        <item>Logic Circuit Design Lab</item>
+    </string-array>
+
+    <string-array name="s3_credit">
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>1</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="s4_credit">
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>1</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="subjects_sgpa">
+        <item>Calculus</item>
+        <item>Differential Equations</item>
+
+        <item>Engineering Physics</item>
+        <item>Engineering Chemistry</item>
+
+        <item>Engineering Mechanics</item>
+        <item>Engineering Graphics</item>
+
+        <item>Introduction to Civil Engineering</item>
+        <item>Introduction to Mechanical Engineering Sciences</item>
+        <item>Introduction to Electrical Engineering</item>
+        <item>Introduction to Electronics Engineering</item>
+        <item>Introduction to Computing and Problem Solving</item>
+        <item>Introduction to Chemical Engineering</item>
+
+        <item>Basics of Civil Engineering</item>
+        <item>Basics of Mechanical Engineering</item>
+        <item>Basics of Electrical Engineering</item>
+        <item>Basics of Electronics Engineering</item>
+
+        <item>Introduction to Sustainable Engineering</item>
+        <item>Design and Engineering</item>
+
+        <item>Engineering Physics Lab</item>
+        <item>Engineering Chemistry Lab</item>
+
+        <item>Civil Engineering Workshop</item>
+        <item>Mechanical Engineering Workshop</item>
+        <item>Electrical Engineering Workshop</item>
+        <item>Electronics Engineering Workshop</item>
+        <item>Computer Science Workshop</item>
+        <item>Chemical Engineering Workshop</item>
+
+    </string-array>
+
+
+    <string-array name="grade">
+        <item>Grade</item>
+        <item>"O"</item>
+        <item>"A+"</item>
+        <item>"A"</item>
+        <item>"B+"</item>
+        <item>"B"</item>
+        <item>"C"</item>
+        <item>"P"</item>
+        <item>"F"</item>
+
+    </string-array>
+
+
+    //Module weight
+
+    <string-array name="common_weight">
+        <item>Module I - 15%</item>
+        <item>Module II - 15%</item>
+        <item>Module III - 15%</item>
+        <item>Module IV - 15%</item>
+        <item>Module V - 20%</item>
+        <item>Module VI - 20%</item>
+        <item>Text Book &amp; References</item>
+
+    </string-array>
+
+
+    <string-array name="graphics_weight">
+        <item>Module I - 20%</item>
+        <item>Module II - 20%</item>
+        <item>Module III - 20%</item>
+        <item>Module IV - Internal</item>
+        <item>Module V - 20%</item>
+        <item>Module VI - 20%</item>
+        <item>Text Book &amp; References</item>
+    </string-array>
+
+    <string-array name="basics_electronics_weight">
+        <item>Module I - 10%</item>
+        <item>Module II - 20%</item>
+        <item>Module III - 15%</item>
+        <item>Module IV - 15%</item>
+        <item>Module V - 20%</item>
+        <item>Module VI - 20%</item>
+        <item>Text Book &amp; References</item>
+
+    </string-array>
+
+
+
+</resources>

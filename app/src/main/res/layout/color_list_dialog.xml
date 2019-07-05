@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/schedule_view_background"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    
+    <FrameLayout 
+        android:id="@+id/color_button_base" 
+        android:paddingLeft="4dp"
+        android:layout_width="292dp" 
+        android:layout_height="284dp"
+        android:layout_margin="4dp" />
+    
+    <View 
+        android:background="@color/bar_button_dark_gray"
+        android:layout_width="284dp" 
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+    
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        android:layout_width="292dp"
+        android:layout_height="wrap_content">
+        
+        <View 
+            android:layout_width="0dp" 
+            android:layout_height="44dp"
+            android:layout_weight="1.0" />
+        
+        <ImageButton 
+            android:id="@+id/button_close"
+            android:background="@drawable/selector_button"
+            android:layout_width="44dp"
+            android:layout_height="44dp" 
+            android:src="@drawable/button_close"
+            android:contentDescription="@string/content_desc" />
+        
+    </LinearLayout>
+</LinearLayout>

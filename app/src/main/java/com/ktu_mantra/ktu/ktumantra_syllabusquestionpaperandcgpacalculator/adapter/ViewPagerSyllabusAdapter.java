@@ -2,14 +2,15 @@ package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.adap
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.R;
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.database.DatabaseHandler;

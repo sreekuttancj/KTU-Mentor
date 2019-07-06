@@ -23,7 +23,7 @@
         android:textStyle="bold"
         android:layout_below="@+id/toolbar"/>
 
-    <android.support.v7.widget.SwitchCompat
+    <androidx.appcompat.widget.SwitchCompat
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/switch_saturday"
@@ -60,13 +60,13 @@
         android:layout_below="@+id/text_view_weak_day"
         >
 
-     <android.support.v7.widget.AppCompatSpinner
+     <androidx.appcompat.widget.AppCompatSpinner
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:id="@+id/spinner_period"
          >
 
-     </android.support.v7.widget.AppCompatSpinner>
+     </androidx.appcompat.widget.AppCompatSpinner>
 
     </RelativeLayout>
 

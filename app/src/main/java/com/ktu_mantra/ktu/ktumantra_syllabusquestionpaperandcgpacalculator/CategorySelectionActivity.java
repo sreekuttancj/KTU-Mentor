@@ -1,44 +1,35 @@
 package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator;
 
-import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.Signature;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.LayerDrawable;
-import android.media.AudioManager;
-import android.media.SoundPool;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.provider.MediaStore;
-import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.util.Base64;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 import com.kobakei.ratethisapp.RateThisApp;
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.database.DatabaseHandler;
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.helper.ConnectionDetector;
@@ -94,6 +85,7 @@ public class CategorySelectionActivity extends BaseActivity implements Navigatio
     DatabaseHandler databaseHandler;
 
     DrawerLayout drawer;
+
     static final int SHARE_REQUEST = 1;  // The request code
     MaterialIntroView materialIntroView;
 
@@ -106,7 +98,7 @@ public class CategorySelectionActivity extends BaseActivity implements Navigatio
         RateThisApp.Config config = new RateThisApp.Config(3, 5);
         RateThisApp.init(config);
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar = findViewById(R.id.toolbar);
         prefManager=new PrefManager(getApplicationContext());
         connectionDetector =new ConnectionDetector(getApplicationContext());
         databaseHandler=new DatabaseHandler(getApplicationContext());
@@ -117,23 +109,23 @@ public class CategorySelectionActivity extends BaseActivity implements Navigatio
         } catch (IOException ioe) {
             throw new Error("Unable to create database");
         }
-        imageViewCalculator= (ImageView) findViewById(R.id.imageViewCalculator);
-        imageViewSyllabus= (ImageView) findViewById(R.id.imageViewSyllabus);
-        imageViewQuestionBank= (ImageView) findViewById(R.id.imageViewQuestionBank);
-        imageViewTimetable= (ImageView) findViewById(R.id.imageViewAboutUs);
-        imageViewCalender= (ImageView) findViewById(R.id.imageViewCalender);
-        imageViewNotification= (ImageView) findViewById(R.id.imageViewNotification);
-        imageViewEntertainment= (ImageView) findViewById(R.id.imageViewEntertainment);
-        imageViewDictionary= (ImageView) findViewById(R.id.imageViewDictionary);
+        imageViewCalculator= findViewById(R.id.imageViewCalculator);
+        imageViewSyllabus= findViewById(R.id.imageViewSyllabus);
+        imageViewQuestionBank= findViewById(R.id.imageViewQuestionBank);
+        imageViewTimetable= findViewById(R.id.imageViewAboutUs);
+        imageViewCalender= findViewById(R.id.imageViewCalender);
+        imageViewNotification= findViewById(R.id.imageViewNotification);
+        imageViewEntertainment= findViewById(R.id.imageViewEntertainment);
+        imageViewDictionary= findViewById(R.id.imageViewDictionary);
 
-        textViewCalculator= (TextView) findViewById(R.id.textViewCalculator);
-        textViewSyllabus= (TextView) findViewById(R.id.textViewSyllabus);
-        textViewQuestionBank= (TextView) findViewById(R.id.textViewQuestionBank);
-        textViewTimetable= (TextView) findViewById(R.id.textViewAboutUs);
-        textViewCalender= (TextView) findViewById(R.id.textViewCalender);
-        textViewNotification= (TextView) findViewById(R.id.textViewNotification);
-        textViewEntertainment= (TextView) findViewById(R.id.textViewEntertainment);
-        textViewDictionary= (TextView) findViewById(R.id.textViewDictionary);
+        textViewCalculator= findViewById(R.id.textViewCalculator);
+        textViewSyllabus= findViewById(R.id.textViewSyllabus);
+        textViewQuestionBank= findViewById(R.id.textViewQuestionBank);
+        textViewTimetable= findViewById(R.id.textViewAboutUs);
+        textViewCalender= findViewById(R.id.textViewCalender);
+        textViewNotification= findViewById(R.id.textViewNotification);
+        textViewEntertainment= findViewById(R.id.textViewEntertainment);
+        textViewDictionary= findViewById(R.id.textViewDictionary);
 
         imageViewCalculator.setOnClickListener(this);
         imageViewSyllabus.setOnClickListener(this);
@@ -148,13 +140,13 @@ public class CategorySelectionActivity extends BaseActivity implements Navigatio
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = findViewById(R.id.drawer_layout);
         final ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setItemIconTintList(null);
 
@@ -382,13 +374,13 @@ public class CategorySelectionActivity extends BaseActivity implements Navigatio
             Intent intentImportantDays=new Intent(CategorySelectionActivity.this,FavouriteDayActivity.class);
             startActivity(intentImportantDays);
         }
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;    }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -442,7 +434,7 @@ public class CategorySelectionActivity extends BaseActivity implements Navigatio
                     startActivity(intentNotification);
                 }
                 else {
-                    Snackbar.make(v,"No network connection",Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(v,"No network connection", Snackbar.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.imageViewCalender:

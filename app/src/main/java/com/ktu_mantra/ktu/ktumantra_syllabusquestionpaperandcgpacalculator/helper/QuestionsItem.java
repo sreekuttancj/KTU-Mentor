@@ -3,9 +3,9 @@ package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.help
 
 public class QuestionsItem {
 
-    String name;
-    String year;
-    String pos;
+    private String name;
+    private String year;
+    private Long pos;
 
     public String getName() {
         return name;
@@ -23,11 +23,11 @@ public class QuestionsItem {
         this.year = year;
     }
 
-    public String getPos() {
+    public Long getPos() {
         return pos;
     }
 
-    public void setPos(String pos) {
+    public void setPos(Long pos) {
         this.pos = pos;
     }
 }

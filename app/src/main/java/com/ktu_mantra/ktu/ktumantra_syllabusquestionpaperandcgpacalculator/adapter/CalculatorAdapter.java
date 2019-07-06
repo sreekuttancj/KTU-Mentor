@@ -1,9 +1,10 @@
 package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.adapter;
 
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.CgpaFragment;
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.SgpaFragment;

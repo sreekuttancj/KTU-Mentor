@@ -1,7 +1,7 @@
 package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator;
 
-import android.*;
 import android.Manifest;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
@@ -14,13 +14,15 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.KeyEvent;
@@ -29,13 +31,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -112,7 +114,7 @@ public class QuestionPaperActivity extends BaseActivity {
                 finish();
             }
         });
-        mAdView = (AdView) findViewById(R.id.adView);
+        mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build();
 
         mAdView.loadAd(adRequest);
@@ -126,7 +128,7 @@ public class QuestionPaperActivity extends BaseActivity {
         });
 
 
-        relativeLayoutMain= (RelativeLayout) findViewById(R.id.re_main);
+        relativeLayoutMain= findViewById(R.id.re_main);
         prefManager=new PrefManager(getApplicationContext());
         databaseHandler=new DatabaseHandler(getApplicationContext());
         connectionDetector =new ConnectionDetector(getApplicationContext());
@@ -154,7 +156,7 @@ public class QuestionPaperActivity extends BaseActivity {
         if (savedInstanceState != null) {
             mDownloadUrl = savedInstanceState.getParcelable(KEY_DOWNLOAD_URL);
         }
-        listViewQuestionPaper = (RecyclerView) findViewById(R.id.listViewQuestionSelection);
+        listViewQuestionPaper = findViewById(R.id.listViewQuestionSelection);
         listViewQuestionPaper.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
 
@@ -175,23 +177,21 @@ public class QuestionPaperActivity extends BaseActivity {
                         public void onDataChange(DataSnapshot dataSnapshot) {
 
                             for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-
+                                Log.e("db_data",postSnapshot.toString());
 
                                 questionsItem = postSnapshot.getValue(QuestionsItem.class);
 
 
-                                databaseHandler.addQuestionPaper(questionsItem.getPos(), questionsItem.getName(), questionsItem.getYear());
-                                questionsItemList =databaseHandler.getQuestionContent();
+                                databaseHandler.addQuestionPaper(String.valueOf(questionsItem.getPos()), questionsItem.getName(), questionsItem.getYear());
+                                questionsItemList = databaseHandler.getQuestionContent();
 
-                                questionPaperAdapter=new QuestionPaperAdapter(getApplicationContext(), questionsItemList);
+                                questionPaperAdapter = new QuestionPaperAdapter(getApplicationContext(), questionsItemList);
                                 listViewQuestionPaper.setAdapter(questionPaperAdapter);
 
 
                                 hideProgressDialog();
 
                             }
-
-
                         }
 
                         @Override
@@ -261,11 +261,12 @@ public class QuestionPaperActivity extends BaseActivity {
                     if (myExternalFile.exists()) {
                         Intent intentResult = new Intent(Intent.ACTION_VIEW);
 
-
-                        intentResult.setDataAndType(Uri.fromFile(myExternalFile), "application/pdf");
+                        Uri downloadURI = FileProvider.getUriForFile(QuestionPaperActivity.this,
+                                BuildConfig.APPLICATION_ID + ".provider",myExternalFile );
+                        intentResult.setDataAndType(downloadURI, "application/pdf");
                         intentResult.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                        intentResult.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                         startActivity(intentResult);
-
 
                     } else {
                         beginDownload(questionPaperName);
@@ -294,12 +295,15 @@ public class QuestionPaperActivity extends BaseActivity {
                     String path = intent.getStringExtra(DownloadService.EXTRA_DOWNLOAD_PATH);
 
                    Intent intentResult = new Intent(Intent.ACTION_VIEW);
+
                    File myExternalFile = new File(getExternalFilesDir(DownloadService.filepath), path);
 
                     questionPaperAdapter.notifyDataSetChanged();
-
-                    intentResult.setDataAndType(Uri.fromFile(myExternalFile), "application/pdf");
+                    Uri downloadURI = FileProvider.getUriForFile(QuestionPaperActivity.this,
+                            BuildConfig.APPLICATION_ID + ".provider",myExternalFile );
+                    intentResult.setDataAndType(downloadURI, "application/pdf");
                     intentResult.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                    intentResult.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                     startActivity(intentResult);
 
                     dismissDialog(progress_bar_type);
@@ -542,7 +546,7 @@ public class QuestionPaperActivity extends BaseActivity {
     }
 
     private void showMessageOKCancel(String message, DialogInterface.OnClickListener okListener) {
-        new android.support.v7.app.AlertDialog.Builder(QuestionPaperActivity.this)
+        new AlertDialog.Builder(QuestionPaperActivity.this)
                 .setMessage(message)
                 .setPositiveButton("OK", okListener)
                 .setNegativeButton("Cancel", null)

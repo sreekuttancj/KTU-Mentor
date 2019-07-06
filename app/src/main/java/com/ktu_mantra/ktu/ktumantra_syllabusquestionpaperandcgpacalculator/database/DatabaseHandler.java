@@ -291,7 +291,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
             QuestionsItem questionsItem =new QuestionsItem();
             if (mCursor.getCount()>0){
-                questionsItem.setPos(mCursor.getString(0));
+                questionsItem.setPos(Long.valueOf(mCursor.getString(0)));
                 questionsItem.setName(mCursor.getString(1));
                 questionsItem.setYear(mCursor.getString(2));
                 questionsItems.add(questionsItem);

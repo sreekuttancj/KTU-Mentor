@@ -1,4 +1,4 @@
-package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator;
+package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.syllabus;
 
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -27,11 +27,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.adapter.SyllabusAdapter;
+import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.BaseActivity;
+import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.R;
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.database.DatabaseHandler;
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.helper.ConnectionDetector;
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.helper.PrefManager;
-import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.helper.SyllabusItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,12 +67,12 @@ public class SyllabusActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_syllabus);
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar = findViewById(R.id.toolbar);
         mToolbar.setTitle("Syllabus");
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        final RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.re_main);
+        final RelativeLayout relativeLayout = findViewById(R.id.re_main);
 
         databaseHandler = new DatabaseHandler(getApplicationContext());
         prefManager = new PrefManager(getApplicationContext());
@@ -131,7 +131,8 @@ public class SyllabusActivity extends BaseActivity {
         } else if (prefManager.getBranch().equals("MR") && !prefManager.getSemester().equals("S1&S2")) {
             branch = "mr";
 
-        } else {
+        }
+        else {
             semester = "s1_s2";
         }
 
@@ -282,7 +283,7 @@ public class SyllabusActivity extends BaseActivity {
         });
 
 
-        recyclerViewSyllabus = (RecyclerView) findViewById(R.id.recyclerViewSyllabus);
+        recyclerViewSyllabus = findViewById(R.id.recyclerViewSyllabus);
         syllabusAdapter = new SyllabusAdapter(SyllabusActivity.this, subject);
         recyclerViewSyllabus.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         recyclerViewSyllabus.setAdapter(syllabusAdapter);
@@ -295,8 +296,6 @@ public class SyllabusActivity extends BaseActivity {
                 intentSyllabusInner.putExtra("subject", subject[position]);
                 intentSyllabusInner.putExtra("position", String.valueOf(position));
                 startActivity(intentSyllabusInner);
-
-
             }
 
             @Override

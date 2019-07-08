@@ -10,7 +10,7 @@ import android.util.Log;
 
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.helper.CalenderItem;
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.helper.QuestionsItem;
-import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.helper.SyllabusItem;
+import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.syllabus.SyllabusItem;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -255,13 +255,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         Cursor mCursor=db.rawQuery(getAllData,null);
         mCursor.moveToFirst();
 
-        syllabusItem.setM1(null);
-        syllabusItem.setM2(null);
-        syllabusItem.setM3(null);
-        syllabusItem.setM4(null);
-        syllabusItem.setM5(null);
-        syllabusItem.setM6(null);
-        syllabusItem.setT_r(null);
 
         if (mCursor.getCount()>0) {
 

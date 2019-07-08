@@ -1,4 +1,4 @@
-package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator;
+package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.syllabus;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -16,7 +16,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.adapter.ViewPagerSyllabusAdapter;
+import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.R;
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.helper.ConnectionDetector;
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.helper.PrefManager;
 

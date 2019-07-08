@@ -47,7 +47,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SyllabusActivity"
+            android:name=".syllabus.SyllabusActivity"
             android:screenOrientation="portrait">
 
             <!--
@@ -82,7 +82,7 @@
             android:name=".AboutUsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SyllabusInnerActivity"
+            android:name=".syllabus.SyllabusInnerActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
@@ -100,7 +100,7 @@
             android:name=".NotificationActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ModuleActivity"
+            android:name=".syllabus.ModuleActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".AdblockActivity"

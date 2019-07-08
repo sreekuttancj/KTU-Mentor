@@ -1,12 +1,10 @@
-package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.adapter;
+package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.syllabus;
 
 import android.content.Context;
-import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,7 +16,7 @@ import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.helpe
 public class SyllabusAdapter  extends RecyclerView.Adapter<SyllabusAdapter.MyViewHolder> {
 
     private Context context;
-    private String subject[]=new String[30];
+    private String subject[];
     private PrefManager prefManager;
     public SyllabusAdapter(Context context,String[] subject)
     {
@@ -162,9 +160,9 @@ public class SyllabusAdapter  extends RecyclerView.Adapter<SyllabusAdapter.MyVie
 
         MyViewHolder(View itemView) {
             super(itemView);
-            title = (TextView) itemView.findViewById(R.id.textViewSubjectName);
-            courseNO = (TextView) itemView.findViewById(R.id.textViewCourseNo);
-            credit = (TextView) itemView.findViewById(R.id.textViewCredits);
+            title = itemView.findViewById(R.id.textViewSubjectName);
+            courseNO = itemView.findViewById(R.id.textViewCourseNo);
+            credit = itemView.findViewById(R.id.textViewCredits);
         }
     }
 }

@@ -36,6 +36,7 @@ import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.helpe
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.helper.NotificationItem;
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.helper.PrefManager;
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.helper.Utils;
+import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.syllabus.SyllabusActivity;
 
 import java.io.IOException;
 import java.text.DateFormat;

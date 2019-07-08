@@ -1,4 +1,4 @@
-package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.adapter;
+package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.syllabus;
 
 import android.app.Activity;
 import android.content.Context;
@@ -15,7 +15,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.R;
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.database.DatabaseHandler;
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.helper.PrefManager;
-import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.helper.SyllabusItem;
+import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.syllabus.SyllabusItem;
 
 
 public class ViewPagerSyllabusAdapter extends PagerAdapter {

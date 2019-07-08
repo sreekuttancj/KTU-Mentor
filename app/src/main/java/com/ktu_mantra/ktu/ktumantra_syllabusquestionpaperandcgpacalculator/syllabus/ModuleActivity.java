@@ -1,4 +1,4 @@
-package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator;
+package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.syllabus;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -14,6 +14,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.R;
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.helper.ConnectionDetector;
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.helper.PrefManager;
 
@@ -96,7 +97,7 @@ public class ModuleActivity extends AppCompatActivity implements View.OnClickLis
 //        });
 //
 
-        buttonInstall= (Button) findViewById(R.id.button_install);
+        buttonInstall= findViewById(R.id.button_install);
         buttonInstall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -176,7 +177,7 @@ public class ModuleActivity extends AppCompatActivity implements View.OnClickLis
 
         }
 
-        Intent intentSyllabusInner=new Intent(ModuleActivity.this,SyllabusInnerActivity.class);
+        Intent intentSyllabusInner=new Intent(ModuleActivity.this, SyllabusInnerActivity.class);
         intentSyllabusInner.putExtra("subject",subject);
         intentSyllabusInner.putExtra("position",position);
         intentSyllabusInner.putExtra("module_position",modulePosition);

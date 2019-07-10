@@ -104,12 +104,13 @@ public class CategorySelectionActivity extends BaseActivity implements Navigatio
         connectionDetector =new ConnectionDetector(getApplicationContext());
         databaseHandler=new DatabaseHandler(getApplicationContext());
 
-        try {
+        //todo commented db creation
+//        try {
             // check if database exists in app path, if not copy it from assets
-            databaseHandler.createCalenderDb();
-        } catch (IOException ioe) {
-            throw new Error("Unable to create database");
-        }
+//            databaseHandler.createCalenderDb();
+//        } catch (IOException ioe) {
+//            throw new Error("Unable to create database");
+//        }
         imageViewCalculator= findViewById(R.id.imageViewCalculator);
         imageViewSyllabus= findViewById(R.id.imageViewSyllabus);
         imageViewQuestionBank= findViewById(R.id.imageViewQuestionBank);

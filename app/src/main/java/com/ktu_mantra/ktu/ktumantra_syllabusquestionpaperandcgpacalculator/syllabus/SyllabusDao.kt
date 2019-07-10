@@ -1,5 +1,6 @@
 package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.syllabus
 
+import android.database.Cursor
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
@@ -9,9 +10,17 @@ import androidx.room.Query
 @Dao
 interface SyllabusDao {
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(position: Int, course: String, branch: String, semester: String, subName: String, module1: String, module2: String, module3: String, module4: String, module5: String, module6: String, refference: String)
+//    @Insert(onConflict = OnConflictStrategy.REPLACE)
+//    fun insert(id: String, course: String, branch: String, semester: String, sub_name: String, module_1: String, module_2: String, module_3: String, module_4: String, module_5: String, module_6: String, refference: String)
 
-    @Query("SELECT module_1 , module_2, module_3 , module_4 , module_5 , module_6 , refference FROM syllabus WHERE course = :course AND branch = :branch AND semester = :semester AND id= :position")
-    fun getSyllabusContent(position: Int, course: String, branch: String, semester: String): LiveData<SyllabusItem>
+//    @Query("SELECT module_1 , module_2, module_3 , module_4 , module_5 , module_6 , refference FROM syllabus WHERE course = :course AND branch = :branch AND semester = :semester AND id= :position")
+//    fun getSyllabusContent(position: Int, course: String, branch: String, semester: String): LiveData<SyllabusItem>
+//
+    @Query("SELECT count(*) FROM syllabus  WHERE course = :course AND branch = :branch AND semester = :semester")
+    fun checkDb(course: String,branch: String,semester: String): Cursor
+
+    @Query ("INSERT INTO syllabus (id,course,branch,semester,sub_name,module_1,module_2,module_3,module_4,module_5,module_6,refference) VALUES (:id,:course,:branch,:semester,:sub_name,:module_1,:module_2,:module_3,:module_4,:module_5,:module_6,:refference)")
+    suspend fun insert(id: Int, course: String, branch: String, semester: String, sub_name: String, module_1: String, module_2: String, module_3: String, module_4: String, module_5: String, module_6: String, refference: String)
+
+
 }

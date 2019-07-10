@@ -138,6 +138,7 @@ public class SyllabusAdapter  extends RecyclerView.Adapter<SyllabusAdapter.MyVie
         }
     }
 
+
     @Override
     public int getItemCount() {
 
@@ -165,4 +166,5 @@ public class SyllabusAdapter  extends RecyclerView.Adapter<SyllabusAdapter.MyVie
             credit = itemView.findViewById(R.id.textViewCredits);
         }
     }
+
 }

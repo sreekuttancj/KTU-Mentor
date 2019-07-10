@@ -4,10 +4,10 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.syllabus.SyllabusEntity
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.syllabus.SyllabusDao
+import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.syllabus.SyllabusEntity
 
-@Database(entities = [SyllabusEntity::class], version = 2)
+@Database(entities = [SyllabusEntity::class], version = 5)
 public abstract class AppDatabase : RoomDatabase() {
 
     abstract fun syllabusDao(): SyllabusDao
@@ -26,7 +26,9 @@ public abstract class AppDatabase : RoomDatabase() {
                         context.applicationContext,
                         AppDatabase::class.java,
                         "ktu"
-                ).build()
+                ).fallbackToDestructiveMigration()
+                        .allowMainThreadQueries()
+                        .build()
                 INSTANCE = instance
                 return instance
             }

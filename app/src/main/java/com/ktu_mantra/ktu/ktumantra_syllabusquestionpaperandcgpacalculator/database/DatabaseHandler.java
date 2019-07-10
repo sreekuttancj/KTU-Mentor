@@ -106,7 +106,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_SYLLABUS);
+//        db.execSQL("DROP TABLE IF EXISTS " + TABLE_SYLLABUS);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_QUESTIONPAPER);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_CALENDER_FAVOURITE);
         db.execSQL("DROP TABLE IF EXISTS subject");
@@ -233,7 +233,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         Log.i("count of db",String.valueOf(iCount));
 
         return iCount;
-
     }
 
     public int checkQuestions(){

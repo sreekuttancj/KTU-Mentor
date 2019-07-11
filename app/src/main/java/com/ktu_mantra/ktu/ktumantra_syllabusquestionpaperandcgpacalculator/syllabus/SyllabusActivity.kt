@@ -68,7 +68,7 @@ class SyllabusActivity : BaseActivity() {
         syllabusViewModel.setSubject()
 
         //set adapter
-        syllabusAdapter = SyllabusAdapter(this, syllabusViewModel.getSubjects())
+        syllabusAdapter = SyllabusAdapter(this, syllabusViewModel.getSubjects(),syllabusViewModel)
         recyclerViewSyllabus.adapter = syllabusAdapter
 
 

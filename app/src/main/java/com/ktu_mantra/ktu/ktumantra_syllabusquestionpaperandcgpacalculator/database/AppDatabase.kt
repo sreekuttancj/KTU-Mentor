@@ -1,16 +1,21 @@
 package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.database
 
 import android.content.Context
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.syllabus.SyllabusDao
-import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.syllabus.SyllabusEntity
+import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.syllabus.SyllabusItem
 
-@Database(entities = [SyllabusEntity::class], version = 5)
+@Database(entities = [SyllabusItem::class], version = 6)
 public abstract class AppDatabase : RoomDatabase() {
 
     abstract fun syllabusDao(): SyllabusDao
+
+    private val mIsDatabaseCreated = MutableLiveData<Boolean>()
+
 
     companion object {
         @Volatile
@@ -34,4 +39,13 @@ public abstract class AppDatabase : RoomDatabase() {
             }
         }
     }
+
+
+    private fun setDatabaseCreated() {
+        mIsDatabaseCreated.postValue(true)
+    }
+    fun getDatabaseCreated(): LiveData<Boolean> {
+        return mIsDatabaseCreated
+    }
+
 }

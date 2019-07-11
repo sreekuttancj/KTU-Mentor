@@ -24,24 +24,21 @@ class SyllabusViewModel(application: Application) : AndroidViewModel(application
     private val prefManager: PrefManager = PrefManager(applicationContext)
     //check network connection
     private val connectionDetector: ConnectionDetector = ConnectionDetector(applicationContext)
-
-//    private val syllabusItem: LiveData<SyllabusItem>
+    //get from repository
+    private lateinit var syllabusItem: SyllabusItem
 
     var course = "btech"
     var branch = ""
     var semester = prefManager.getSemester().toLowerCase()
     var subject = arrayOfNulls<String>(30)
-
-//    init {
-//        syllabusItem = repository.getSyllabusContent(syllabusID,prefManager.getCourse(),prefManager.getBranch(),prefManager.getSemester())
-//    }
+    private lateinit var courseNO: String
+    private lateinit var credit: String
 
     fun checkNetworkConnection(): Boolean{
         return connectionDetector.isConnectingToInternet
     }
 
     //get syllabus from firebase and save it in sqlite
-
      fun saveSyllabusFromFirebase(){
         repository.getFirebaseRef(course,semester, branch).addValueEventListener(
                object : ValueEventListener {
@@ -64,7 +61,6 @@ class SyllabusViewModel(application: Application) : AndroidViewModel(application
                    }
                })
     }
-
 
      fun insert(syllabusItem: SyllabusItem) = viewModelScope.launch{
         repository.insert(syllabusItem,prefManager)
@@ -231,4 +227,150 @@ class SyllabusViewModel(application: Application) : AndroidViewModel(application
 
     fun getSubjects() = subject
 
+    /*
+    For Module Activity
+     */
+
+    fun showAdd(): Boolean{
+       return prefManager.getCount()>1
+    }
+
+    /*
+    For Syllabus Adapter
+     */
+    fun getSelectedSemester() = semester
+
+    fun getCourseNo(position: Int): String {
+
+        if (prefManager.getSemester() != "S1&S2") {
+            if (prefManager.getBranch() == "CE") {
+                if (prefManager.getSemester() == "S3") {
+                    courseNO= applicationContext.resources.getStringArray(R.array.ce_s3_course_no)[position]
+                } else {
+                    courseNO=applicationContext.resources.getStringArray(R.array.ce_s4_course_no)[position]
+                }
+            } else if (prefManager.getBranch() == "CS") {
+                if (prefManager.getSemester() == "S3") {
+                    courseNO=applicationContext.resources.getStringArray(R.array.cs_s3_course_no)[position]
+                } else {
+                    courseNO=applicationContext.resources.getStringArray(R.array.cs_s4_course_no)[position]
+                }
+            } else if (prefManager.getBranch() == "CH") {
+                if (prefManager.getSemester() == "S3") {
+                    courseNO=applicationContext.resources.getStringArray(R.array.ch_s3_course_no)[position]
+                } else {
+                    courseNO=applicationContext.resources.getStringArray(R.array.ch_s4_course_no)[position]
+                }
+            } else if (prefManager.getBranch() == "EC") {
+                if (prefManager.getSemester() == "S3") {
+                    courseNO=applicationContext.resources.getStringArray(R.array.ec_s3_course_no)[position]
+                } else {
+                    courseNO=applicationContext.resources.getStringArray(R.array.ec_s4_course_no)[position]
+                }
+            } else if (prefManager.getBranch() == "EE") {
+                if (prefManager.getSemester() == "S3") {
+                    courseNO=applicationContext.resources.getStringArray(R.array.ee_s3_course_no)[position]
+                } else {
+                    courseNO=applicationContext.resources.getStringArray(R.array.ee_s4_course_no)[position]
+                }
+            } else if (prefManager.getBranch() == "IC") {
+                if (prefManager.getSemester() == "S3") {
+                    courseNO=applicationContext.resources.getStringArray(R.array.ic_s3_course_no)[position]
+                } else {
+                    courseNO=applicationContext.resources.getStringArray(R.array.ic_s4_course_no)[position]
+                }
+            } else if (prefManager.getBranch() == "IE") {
+                if (prefManager.getSemester() == "S3") {
+                    courseNO=applicationContext.resources.getStringArray(R.array.ie_s3_course_no)[position]
+                } else {
+                    courseNO=applicationContext.resources.getStringArray(R.array.ie_s4_course_no)[position]
+                }
+            } else if (prefManager.getBranch() == "IT") {
+                if (prefManager.getSemester() == "S3") {
+                    courseNO=applicationContext.resources.getStringArray(R.array.it_s3_course_no)[position]
+                } else {
+                    courseNO=applicationContext.resources.getStringArray(R.array.it_s4_course_no)[position]
+                }
+            } else if (prefManager.getBranch() == "ME") {
+                if (prefManager.getSemester() == "S3") {
+                    courseNO=applicationContext.resources.getStringArray(R.array.me_s3_course_no)[position]
+                } else {
+                    courseNO=applicationContext.resources.getStringArray(R.array.me_s4_course_no)[position]
+                }
+            } else if (prefManager.getBranch() == "AE") {
+                if (prefManager.getSemester() == "S3") {
+                    courseNO=applicationContext.resources.getStringArray(R.array.ec_s3_course_no)[position]
+                } else {
+                    courseNO=applicationContext.resources.getStringArray(R.array.ae_s4_course_no)[position]
+                }
+            } else if (prefManager.getBranch() == "AO") {
+                if (prefManager.getSemester() == "S3") {
+                    courseNO=applicationContext.resources.getStringArray(R.array.ao_s3_course_no)[position]
+                } else {
+                    courseNO=applicationContext.resources.getStringArray(R.array.ao_s4_course_no)[position]
+                }
+            } else if (prefManager.getBranch() == "AU") {
+                if (prefManager.getSemester() == "S3") {
+                    courseNO=applicationContext.resources.getStringArray(R.array.au_s3_course_no)[position]
+                } else {
+                    courseNO=applicationContext.resources.getStringArray(R.array.au_s4_course_no)[position]
+                }
+            } else if (prefManager.getBranch() == "BM") {
+                if (prefManager.getSemester() == "S3") {
+                    courseNO=applicationContext.resources.getStringArray(R.array.bm_s3_course_no)[position]
+                } else {
+                    courseNO=applicationContext.resources.getStringArray(R.array.bm_s4_course_no)[position]
+                }
+            } else if (prefManager.getBranch() == "MR") {
+                if (prefManager.getSemester() == "S3") {
+                    courseNO=applicationContext.resources.getStringArray(R.array.mr_s3_course_no)[position]
+                } else {
+                    courseNO=applicationContext.resources.getStringArray(R.array.mr_s4_course_no)[position]
+                }
+            }
+        } else {
+            courseNO=applicationContext.resources.getStringArray(R.array.s1_s2_course_no)[position]
+        }
+        return courseNO
+    }
+
+    fun getCredit(position: Int): String{
+
+        if (prefManager.getSemester() == "S1&S2") {
+            credit= applicationContext.resources.getStringArray(R.array.s1_s2_credit)[position]
+
+        } else if (prefManager.getSemester() == "S3") {
+            credit=applicationContext.resources.getStringArray(R.array.s3_credit)[position]
+        } else {
+            credit=applicationContext.resources.getStringArray(R.array.s4_credit)[position]
+        }
+        return credit
+    }
+
+    /*
+    For ViewPagerSyllabusAdapter
+     */
+    fun getSyllabusItem(syllabusID: Int):SyllabusItem{
+        syllabusItem = repository.getSyllabusContent(syllabusID,prefManager.getCourse(),prefManager.getBranch(),prefManager.getSemester())
+//        syllabusItem = repository.getSyllabusContent(syllabusID,prefManager.getCourse(),prefManager.getBranch(),prefManager.getSemester())
+        Log.i("check_item","checking ${syllabusItem.m1}")
+        return syllabusItem
+    }
+
+    fun setModules(): Array<String?> {
+        val modules = arrayOfNulls<String>(10)
+        modules[0] = syllabusItem.m1
+        modules[1] = syllabusItem.m2
+        modules[2] = syllabusItem.m3
+        modules[3] = syllabusItem.m4
+        modules[4] = syllabusItem.m5
+        modules[5] = syllabusItem.m6
+        modules[6] = syllabusItem.t_r
+        return modules
+    }
+
+    companion object{
+
+        val moduleNO = arrayOf("Module I", "Module II", "Module III", "Module IV", "Module V", "Module VI", "Text Book & References")
+    }
 }

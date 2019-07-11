@@ -1,7 +1,9 @@
 package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.syllabus
 
+import android.database.Cursor
 import android.util.Log
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MediatorLiveData
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.database.AppDatabase
@@ -11,12 +13,17 @@ class SyllabusRepository(private val appDatabase: AppDatabase) {
 
     var database: FirebaseDatabase = FirebaseDatabase.getInstance()
 
+
+
+
     //get syllabus from db
-   /* fun getSyllabusContent(position: Int, course: String, branch: String, semester: String): LiveData<SyllabusItem>{
-        return appDatabase.syllabusDao().getSyllabusContent(position,course,branch,semester)
+    fun getSyllabusContent (position: Int, course: String, branch: String, semester: String): SyllabusItem{
+        val syllabusItem = appDatabase.syllabusDao().getSyllabusContentItem(position,course,branch,semester)
+        Log.i("cursoritem",syllabusItem.m1)
+        return syllabusItem
     }
-*/
-    suspend fun insert(syllabusItem: SyllabusItem,prefManager: PrefManager) {
+
+            suspend fun insert(syllabusItem: SyllabusItem,prefManager: PrefManager) {
         appDatabase.syllabusDao().insert(syllabusItem.pos,prefManager.getCourse(),prefManager.getBranch(),prefManager.getSemester(),
                 syllabusItem.name,syllabusItem.m1,syllabusItem.m2,syllabusItem.m3,syllabusItem.m4,syllabusItem.m5,syllabusItem.m6,
                 syllabusItem.t_r)

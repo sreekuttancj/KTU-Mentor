@@ -1,9 +1,7 @@
 package com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.syllabus
 
-import android.database.Cursor
 import android.util.Log
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MediatorLiveData
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.database.AppDatabase
@@ -13,14 +11,9 @@ class SyllabusRepository(private val appDatabase: AppDatabase) {
 
     var database: FirebaseDatabase = FirebaseDatabase.getInstance()
 
-
-
-
     //get syllabus from db
-    fun getSyllabusContent (position: Int, course: String, branch: String, semester: String): SyllabusItem{
-        val syllabusItem = appDatabase.syllabusDao().getSyllabusContentItem(position,course,branch,semester)
-        Log.i("cursoritem",syllabusItem.m1)
-        return syllabusItem
+    fun getSyllabusContent (position: Int, course: String, branch: String, semester: String): LiveData<SyllabusItem> {
+        return appDatabase.syllabusDao().getSyllabusContentItem(position,course,branch,semester)
     }
 
             suspend fun insert(syllabusItem: SyllabusItem,prefManager: PrefManager) {
@@ -31,7 +24,6 @@ class SyllabusRepository(private val appDatabase: AppDatabase) {
 
     fun getFirebaseRef(course: String,semester: String, branch: String) : DatabaseReference {
 
-        Log.e("check_pref","course is $course, semester is $semester and branch is $branch")
         return if (semester == "s1_s2") {
             database.getReference().child("syllabus").child("course").child(course).child(semester)
         }else{

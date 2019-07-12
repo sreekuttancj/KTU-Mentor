@@ -11,7 +11,7 @@ import androidx.room.Query
 interface SyllabusDao {
 
     @Query("SELECT * FROM syllabus WHERE course = :course AND branch = :branch AND semester = :semester AND id= :position")
-    fun getSyllabusContentItem(position: Int, course: String, branch: String, semester: String): SyllabusItem
+    fun getSyllabusContentItem(position: Int, course: String, branch: String, semester: String):LiveData<SyllabusItem>
 
     @Query("SELECT count(*) FROM syllabus  WHERE course = :course AND branch = :branch AND semester = :semester")
     fun checkDb(course: String,branch: String,semester: String): Cursor

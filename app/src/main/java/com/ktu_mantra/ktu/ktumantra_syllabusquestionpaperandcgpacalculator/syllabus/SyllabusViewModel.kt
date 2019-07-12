@@ -5,6 +5,7 @@ import android.database.Cursor
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.viewModelScope
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.database.DataSnapshot
@@ -25,7 +26,12 @@ class SyllabusViewModel(application: Application) : AndroidViewModel(application
     //check network connection
     private val connectionDetector: ConnectionDetector = ConnectionDetector(applicationContext)
     //get from repository
-    private lateinit var syllabusItem: SyllabusItem
+    private lateinit var syllabusItem: LiveData<SyllabusItem>
+    private val mObservableSyllabus: MediatorLiveData<SyllabusItem> = MediatorLiveData()
+
+    init {
+        mObservableSyllabus.value=null
+    }
 
     var course = "btech"
     var branch = ""
@@ -350,22 +356,21 @@ class SyllabusViewModel(application: Application) : AndroidViewModel(application
     /*
     For ViewPagerSyllabusAdapter
      */
-    fun getSyllabusItem(syllabusID: Int):SyllabusItem{
+    fun getSyllabusItem(syllabusID: Int):LiveData<SyllabusItem>{
         syllabusItem = repository.getSyllabusContent(syllabusID,prefManager.getCourse(),prefManager.getBranch(),prefManager.getSemester())
-//        syllabusItem = repository.getSyllabusContent(syllabusID,prefManager.getCourse(),prefManager.getBranch(),prefManager.getSemester())
-        Log.i("check_item","checking ${syllabusItem.m1}")
+        mObservableSyllabus.addSource(syllabusItem, mObservableSyllabus::setValue)
         return syllabusItem
     }
 
     fun setModules(): Array<String?> {
         val modules = arrayOfNulls<String>(10)
-        modules[0] = syllabusItem.m1
-        modules[1] = syllabusItem.m2
-        modules[2] = syllabusItem.m3
-        modules[3] = syllabusItem.m4
-        modules[4] = syllabusItem.m5
-        modules[5] = syllabusItem.m6
-        modules[6] = syllabusItem.t_r
+        modules[0] = syllabusItem.value?.m1
+        modules[1] = syllabusItem.value?.m2
+        modules[2] = syllabusItem.value?.m3
+        modules[3] = syllabusItem.value?.m4
+        modules[4] = syllabusItem.value?.m5
+        modules[5] = syllabusItem.value?.m6
+        modules[6] = syllabusItem.value?.t_r
         return modules
     }
 

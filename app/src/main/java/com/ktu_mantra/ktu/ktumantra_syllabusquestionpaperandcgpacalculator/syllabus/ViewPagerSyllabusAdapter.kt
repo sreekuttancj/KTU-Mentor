@@ -12,7 +12,7 @@ import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.ktu_mantra.ktu.ktumantra_syllabusquestionpaperandcgpacalculator.R
 
-class ViewPagerSyllabusAdapter(val context: Context,val subjectPosition: Int): PagerAdapter() {
+class ViewPagerSyllabusAdapter(val context: Context): PagerAdapter() {
 
     private lateinit var modules: Array<String?>
 
@@ -20,8 +20,6 @@ class ViewPagerSyllabusAdapter(val context: Context,val subjectPosition: Int): P
 
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val viewLayout = inflater.inflate(R.layout.viewpager_modules, container, false)
-
-        Log.i("check_module",modules[position])
 
         val textViewModules = viewLayout.findViewById<TextView>(R.id.textViewModuleContent)
 
@@ -51,5 +49,6 @@ class ViewPagerSyllabusAdapter(val context: Context,val subjectPosition: Int): P
 
     fun setModules(modules: Array<String?>){
         this.modules = modules
+        notifyDataSetChanged()
     }
 }

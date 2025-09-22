@@ -18,8 +18,10 @@ jobs:
           java-version: '8'
 
       - name: Set up Android SDK
-        run: ${ANDROID_HOME}/tools/bin/sdkmanager --install "build-tools;23.0.3"
-  
+        uses: android-actions/setup-android@v2
+        with:
+          packages: 'platform-tools;platforms;android-23;build-tools;23.0.3'
+          
   build-dev-apk:
     runs-on: ubuntu-latest
     needs: 'env-setup'

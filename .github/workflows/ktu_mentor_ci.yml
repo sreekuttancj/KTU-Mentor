@@ -17,10 +17,15 @@ jobs:
           distribution: 'temurin'
           java-version: '8'
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v2
-        with:
-          packages: 'platform-tools;platforms;android-23;build-tools;23.0.3'
+      - name: Download legacy Android SDK Tools
+        run: |
+          mkdir -p $HOME/android-sdk
+          wget https://dl.google.com/android/repository/tools_r25.2.5-linux.zip -O tools_r25.2.5-linux.zip
+          unzip -q tools_r25.2.5-linux.zip -d $HOME/android-sdk
+          export ANDROID_HOME=$HOME/android-sdk
+          export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$PATH
+          yes | sdkmanager --licenses
+          sdkmanager "platforms;android-23" "build-tools;23.0.3"
           
   build-dev-apk:
     runs-on: ubuntu-latest

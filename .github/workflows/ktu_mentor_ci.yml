@@ -24,8 +24,8 @@ jobs:
           unzip -q tools_r25.2.5-linux.zip -d $HOME/android-sdk
           export ANDROID_HOME=$HOME/android-sdk
           export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$PATH
-          yes | sdkmanager --licenses
           sdkmanager "platforms;android-23" "build-tools;23.0.3"
+  
           
   build-dev-apk:
     runs-on: ubuntu-latest

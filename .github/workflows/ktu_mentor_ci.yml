@@ -23,8 +23,8 @@ jobs:
           mkdir -p $HOME/android-sdk
           wget https://dl.google.com/android/repository/tools_r25.2.5-linux.zip -O tools_r25.2.5-linux.zip
           unzip -q tools_r25.2.5-linux.zip -d $HOME/android-sdk
-          export ANDROID_HOME=$HOME/android-sdk
-          export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$PATH
+          echo "ANDROID_HOME=$HOME/android-sdk" >> $GITHUB_ENV
+          echo "$HOME/android-sdk/tools:$HOME/android-sdk/tools/bin:$PATH" >> $GITHUB_ENV
           sdkmanager "platforms;android-23" "build-tools;23.0.3"
   
       - name: Checkout code
